@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Minha Página</title>
     <meta charset="UTF-8">
+    <title>Portal de Dados Nacionais</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: #334155;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e293b;
+            margin-top: 20px;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Essa é minha primeira página no GitHub Pages 🚀</p>
-</body>
-</html>
+
+<header>
+    <h1>📊 Portal de Dados Nacionais</h1>
+    <p>Acesso rápido a bases de dados brasileiras</p>
+</header>
+
+<div class="container">
+
+    <div class="grid">
+
+        <div class="card">
+            <a href="#" target="_blank">IBGE</a>
+            <p>Instituto Brasileiro de Geografia e Estatística</p>
+        </div>
+
+        <div class="card">
+            <a href="#" target="_blank">DataSUS</a>
+            <p>Dados de saúde pública</p>
+        </div>
+
+        <div class="card">
+            <a href="#" target="_blank">BACEN</a>
+            <p>Banco Central do Brasil</p>
+        </div>
+
+        <div class="card">
+            <a href="#" target="_blank">INEP</a>
+            <p>Dados educacionais</p>
+        </div>
+
+        <div class="card">
