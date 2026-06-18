@@ -1,150 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Portal de Dados Veiculares</title>
+    <title>Projeto de Demanda Veicular</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
             background-color: #0f172a;
+            color: white;
         }
+
+        .section {
+            padding: 60px 0;
+        }
+
         .card {
+            background-color: #1e293b;
+            border: none;
             transition: 0.3s;
-            cursor: pointer;
         }
+
         .card:hover {
             transform: scale(1.05);
         }
-        .hidden {
-            display: none;
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
         }
     </style>
 </head>
 
-<body class="text-light">
+<body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-        <span class="navbar-brand">🚗 Portal de Dados Veiculares</span>
+        <span class="navbar-brand">🚗 Projeto Veicular</span>
     </div>
 </nav>
 
-<!-- Header -->
-<div class="container text-center mt-4">
-    <h1>Dados de Veículos e Mobilidade</h1>
-    <p class="text-secondary">Bases estratégicas para análise de demanda veicular e veículos elétricos</p>
-</div>
-
-<!-- Busca -->
-<div class="container mt-4">
-    <input id="searchInput" class="form-control" type="text" placeholder="Buscar base de dados...">
-</div>
-
-<!-- Filtros -->
-<div class="container mt-3 text-center">
-    <button class="btn btn-outline-light m-1" onclick="filterCards('all')">Todos</button>
-    <button class="btn btn-outline-info m-1" onclick="filterCards('eletrico')">Elétricos</button>
-    <button class="btn btn-outline-success m-1" onclick="filterCards('mobilidade')">Mobilidade</button>
-    <button class="btn btn-outline-warning m-1" onclick="filterCards('economia')">Economia</button>
-    <button class="btn btn-outline-danger m-1" onclick="filterCards('energia')">Energia</button>
-    <button class="btn btn-outline-primary m-1" onclick="filterCards('infraestrutura')">Infraestrutura</button>
-</div>
-
-<!-- Cards -->
-<div class="container mt-4">
-    <div class="row g-4" id="cardContainer">
-
-        <!-- EXEMPLO DE CARD -->
-        <div class="col-md-4 card-item" data-category="eletrico energia">
-            <div class="card bg-dark text-light h-100 text-center p-3">
-                <h5>⚡ ANEEL</h5>
-                <p>Dados de energia elétrica e consumo</p>
-                <a href="#" target="_blank" class="btn btn-primary">Acessar</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 card-item" data-category="mobilidade economia">
-            <div class="card bg-dark text-light h-100 text-center p-3">
-                <h5>🚗 DENATRAN</h5>
-                <p>Frota de veículos no Brasil</p>
-                <a href="#" target="_blank" class="btn btn-success">Acessar</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 card-item" data-category="economia">
-            <div class="card bg-dark text-light h-100 text-center p-3">
-                <h5>💰 BACEN</h5>
-                <p>Indicadores econômicos e crédito</p>
-                <a href="#" target="_blank" class="btn btn-warning">Acessar</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 card-item" data-category="mobilidade">
-            <div class="card bg-dark text-light h-100 text-center p-3">
-                <h5>🚌 IBGE</h5>
-                <p>Mobilidade e dados populacionais</p>
-                <a href="#" target="_blank" class="btn btn-info">Acessar</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 card-item" data-category="infraestrutura eletrico">
-            <div class="card bg-dark text-light h-100 text-center p-3">
-                <h5>🔌 EPE</h5>
-                <p>Infraestrutura energética e recarga</p>
-                <a href="#" target="_blank" class="btn btn-danger">Acessar</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 card-item" data-category="mobilidade">
-            <div class="card bg-dark text-light h-100 text-center p-3">
-                <h5>📊 DataSUS</h5>
-                <p>Impactos na mobilidade e saúde pública</p>
-                <a href="#" target="_blank" class="btn btn-secondary">Acessar</a>
-            </div>
-        </div>
-
+<!-- HERO (APRESENTAÇÃO) -->
+<section class="hero">
+    <div class="container">
+        <h1>Projeto de Demanda Veicular e Veículos Elétricos</h1>
+        <p class="lead text-secondary">
+            Análise estratégica da evolução da mobilidade e crescimento de veículos elétricos no Brasil
+        </p>
     </div>
-</div>
+</section>
 
-<!-- Rodapé -->
-<footer class="text-center mt-5 p-3 bg-dark">
-    Projeto de Demanda Veicular e Veículos Elétricos ⚡
+<!-- OBJETIVOS -->
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-4">🎯 Objetivos do Projeto</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <h5>📊 Análise de Dados</h5>
+                    <p>Estudar a evolução da frota veicular e tendências de crescimento.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <h5>⚡ Veículos Elétricos</h5>
+                    <p>Avaliar a adoção de veículos elétricos no cenário nacional.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <h5>🏗 Planejamento</h5>
+                    <p>Auxiliar na tomada de decisão sobre infraestrutura e políticas públicas.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PARTICIPANTES -->
+<section class="section bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-4">👥 Participantes</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Heitor Escobar</h5>
+                    <p>Bolsista</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Fernando Araujo</h5>
+                    <p>Orientador</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Marcos Rezende</h5>
+                    <p>Coordenação</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PARCEIROS -->
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-4">🏢 Empresas / Parceiros</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Empresa A</h5>
+                    <p>Parceira de dados</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Empresa B</h5>
+                    <p>Infraestrutura</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card p-3 text-center">
+                    <h5>Universidade</h5>
+                    <p>Pesquisa</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO / RODAPÉ -->
+<footer class="text-center p-4 bg-dark">
+    <p>Projeto acadêmico - Mobilidade e Veículos Elétricos ⚡</p>
 </footer>
-
-<!-- SCRIPT -->
-<script>
-
-// FILTRO POR CATEGORIA
-function filterCards(category) {
-    const cards = document.querySelectorAll(".card-item");
-
-    cards.forEach(card => {
-        const categories = card.getAttribute("data-category");
-
-        if (category === "all" || categories.includes(category)) {
-            card.classList.remove("hidden");
-        } else {
-            card.classList.add("hidden");
-        }
-    });
-}
-
-// BUSCA FUNCIONAL
-document.getElementById("searchInput").addEventListener("keyup", function() {
-    let filter = this.value.toLowerCase();
-    let cards = document.querySelectorAll(".card-item");
-
-    cards.forEach(card => {
-        let text = card.textContent.toLowerCase();
-        card.style.display = text.includes(filter) ? "" : "none";
-    });
-});
-
-</script>
 
 </body>
 </html>
